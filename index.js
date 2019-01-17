@@ -49,7 +49,7 @@ var mainModal = {
     },
 
     show : function(){
-        this.get.modal('show');
+        this.getContainerJQ().modal('show');
         this.onLoadDo();
     },
 
