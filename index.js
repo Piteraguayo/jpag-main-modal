@@ -1,3 +1,5 @@
+require('jquery')
+
 var mainModal = {
     helloWorld : function(){
         console.log("HELLO WORLD");
