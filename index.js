@@ -115,7 +115,7 @@ var mainModal = {
                                 HTMLmodal +='</div>';
                             HTMLmodal +='</div>';
 
-            $('body').appendChild(HTMLmodal);
+            $('body').append(HTMLmodal);
         }
     }
 };
