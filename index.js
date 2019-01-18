@@ -95,7 +95,7 @@ var mainModal = {
 
     createHTML : function(){
         if(!document.getElementById(this.id)){
-            var HTMLmodal='<div class="modal fade" id="mainModal" tabindex="-1" role="dialog" aria-hidden="true">';
+            var HTMLmodal='<div class="modal fade" id="jpgaMainModal" tabindex="-1" role="dialog" aria-hidden="true">';
                                 HTMLmodal +='<div class="modal-dialog" role="document">';
                                     HTMLmodal +='<div class="modal-content">';
                                         HTMLmodal +='<button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
