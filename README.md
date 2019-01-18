@@ -36,5 +36,4 @@ mainModal.showWithContent('Hello world');
 
 **RESULT:**
 
-
-![alt text](https://cdn.jsdelivr.net/gh/Piteraguayo/jpag-main-modal/mainModalSimpleMessage.png)
+![alt text](https://raw.githubusercontent.com/Piteraguayo/jpag-main-modal/master/mainModalSimpleMessage.png)
