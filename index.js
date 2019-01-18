@@ -151,3 +151,5 @@ mainModal.getContainerJQ().on('show.bs.modal', function (e) {
         mainModal.hideCancel();
     }
 });
+
+mainModal.createHTML();
