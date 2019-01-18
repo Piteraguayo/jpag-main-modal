@@ -115,7 +115,7 @@ var mainModal = {
                                 HTMLmodal +='</div>';
                             HTMLmodal +='</div>';
 
-            $('#modalContainerTemp').append(HTMLmodal);
+            document.getElementById('modalContainerTemp').innerHTML=HTMLmodal
         }
     }
 };
