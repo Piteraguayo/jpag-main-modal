@@ -11,10 +11,6 @@ var mainModal = {
     showCancel : false,
     params : {},
 
-    helloWorld : function(){
-        console.log("HELLO WORLD");
-    },
-
     getContainerJQ : function(){
       return   $('#'+this.id)
     },
@@ -49,6 +45,7 @@ var mainModal = {
     },
 
     show : function(){
+        this.createHTML();
         this.getContainerJQ().modal('show');
         this.onLoadDo();
     },
@@ -94,6 +91,32 @@ var mainModal = {
 
     hideCancel : function(){
         this.getCancelButtonDOM().style.display="none";
+    },
+
+    createHTML : function(){
+        if(!document.getElementById(this.id)){
+            var HTMLmodal='<div class="modal fade" id="mainModal" tabindex="-1" role="dialog" aria-hidden="true">';
+                                HTMLmodal +='<div class="modal-dialog" role="document">';
+                                    HTMLmodal +='<div class="modal-content">';
+                                        HTMLmodal +='<button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+                                        HTMLmodal +='<div class="clear_float"></div>';
+
+                                        HTMLmodal +='<div id="mainModalHeader" class="modal-header">';
+                                            HTMLmodal +='<h5 class="modal-title" id="mainModalTitle">Modal title</h5>';
+                                        HTMLmodal +='</div>';
+
+                                        HTMLmodal +='<div class="modal-body" id="mainContentModal"><!-- CONTENT FOR THE MODAL --></div>';
+
+                                        HTMLmodal +='<div id="mainModalFooter" class="modal-footer">';
+                                            HTMLmodal +='<button onclick="mainModal.onAcceptDo()" id="mainModalAcceptButton" type="button" class="btn btn-success pull-right">Continue</button>';
+                                            HTMLmodal +='<button onclick="mainModal.onCancelDo()" id="mainModalCancelButton" type="button" class="btn btn-secondary pull-right">Cancel</button>';
+                                        HTMLmodal +='</div>';
+                                    HTMLmodal +='</div>';
+                                HTMLmodal +='</div>';
+                            HTMLmodal +='</div>';
+
+            $('body').append(HTMLmodal);
+        }
     }
 };
 
