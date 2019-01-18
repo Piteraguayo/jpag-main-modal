@@ -36,4 +36,31 @@ mainModal.showWithContent('Hello world');
 
 **RESULT:**
 
-![alt text](https://raw.githubusercontent.com/Piteraguayo/jpag-main-modal/master/mainModalSimpleMessage.png)
+![Simple mesage](https://raw.githubusercontent.com/Piteraguayo/jpag-main-modal/master/mainModalSimpleMessage.png)
+
+```javascript
+function onAcceptYourModal(){
+	alert('YOU ACCEPTED THE MODAL');
+	mainModal.hide();
+}
+
+function onCancelYourModal(){
+	alert('YOU CANCELLED THE MODAL');
+}
+
+mainModal.showFooter=true;
+mainModal.showCancel=true;
+mainModal.acceptLabel='Save';
+mainModal.onAccept= onAcceptYourModal;
+mainModal.onCancel= onCancelYourModal;
+mainModal.showWithContent('<span style="color:red">Do you want to delete the files?</span>');
+```
+
+**RESULT:**
+
+![Simple mesage](https://raw.githubusercontent.com/Piteraguayo/jpag-main-modal/master/mainModalCancelMessage.png)
+
+You can load async content by using
+```javascript
+mainModal.showContentFromServer(urlYouWant);
+```
