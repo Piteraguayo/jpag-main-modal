@@ -115,10 +115,11 @@ var mainModal = {
                                 HTMLmodal +='</div>';
                             HTMLmodal +='</div>';
 
-            document.getElementById('modalContainerTemp').innerHTML=HTMLmodal
+            $('body').append(HTMLmodal);
         }
     }
 };
+mainModal.createHTML();
 
 mainModal.onAccept= mainModal.hide;
 mainModal.onCancel= mainModal.hide;
@@ -152,4 +153,3 @@ mainModal.getContainerJQ().on('show.bs.modal', function (e) {
     }
 });
 
-mainModal.createHTML();
